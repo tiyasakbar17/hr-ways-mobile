@@ -464,7 +464,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Box alignItems="center">
               <Picker
                 style={{...styles.formStyle, color: theme.colors.bgrey}}
-                enabled={oneData === null}
+                enabled={state.type === 'edit' || state.type === 'add'}
                 onValueChange={(nilai, _) => ubahHandler('provinsi', nilai)}
                 mode="dropdown"
                 selectedValue={
@@ -482,7 +482,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Box alignItems="center">
               <Picker
                 style={{...styles.formStyle, color: theme.colors.bgrey}}
-                enabled={oneData === null}
+                enabled={state.type === 'edit' || state.type === 'add'}
                 onValueChange={nilai => ubahHandler('kabupaten', nilai)}
                 mode="dropdown"
                 selectedValue={
@@ -500,7 +500,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Box alignItems="center">
               <Picker
                 style={{...styles.formStyle, color: theme.colors.bgrey}}
-                enabled={oneData === null}
+                enabled={state.type === 'edit' || state.type === 'add'}
                 onValueChange={nilai => ubahHandler('kecamatan', nilai)}
                 mode="dropdown"
                 selectedValue={
@@ -518,7 +518,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Box alignItems="center">
               <Picker
                 style={{...styles.formStyle, color: theme.colors.bgrey}}
-                enabled={oneData === null}
+                enabled={state.type === 'edit' || state.type === 'add'}
                 onValueChange={nilai => ubahHandler('kelurahan', nilai)}
                 mode="dropdown"
                 selectedValue={

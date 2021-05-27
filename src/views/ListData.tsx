@@ -95,11 +95,15 @@ const ListData = ({navigation}: Props) => {
         HR Ways{' '}
       </Text>
       <HeaderList restore={state.restore} restoreHandler={changeHandler} />
-      <FlatList data={data} keyExtractor={item => item.id} renderItem={renderItem} ListFooterComponent={listFooter}  onEndReached={nextPage} onEndReachedThreshold={0.01} />
+      <FlatList contentContainerStyle={styles.listStyle} data={data} keyExtractor={item => item.id} renderItem={renderItem} ListFooterComponent={listFooter}  onEndReached={nextPage} onEndReachedThreshold={0.01} />
     </Box>
   );
 };
 
 export default ListData;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  listStyle: {
+    maxHeight: Size.hs(59),
+  }
+});

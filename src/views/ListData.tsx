@@ -3,6 +3,7 @@ import { Spinner } from 'native-base';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
+import PopUpComponent from '../components/global/components/PopUpComponent';
 import {useAppDispatch, useAppSelector} from '../components/global/types/reduxHooks';
 import {Size} from '../components/global/types/Sizing';
 import theme, {Box, Text} from '../components/global/types/theme';
@@ -27,7 +28,7 @@ const ListData = ({navigation}: Props) => {
   const [state, setstate] = React.useState<initState>(initialState);
   const dispatch = useAppDispatch()
   const {darkMode}: settingInitState = useAppSelector(state => state.settings);
-  const {isLoading} = useAppSelector(state => state.popup);
+  const {isLoading, isPopedUp} = useAppSelector(state => state.popup);
   const {data, totalPage, pageNow} = useAppSelector(state => state.Karyawan);
 
   const findUserToHandle = (id: number) => {
@@ -75,7 +76,9 @@ const ListData = ({navigation}: Props) => {
     [ data],
   );
 
-  return (
+  return isPopedUp ? (
+    <PopUpComponent />
+  ) : (
     <Box
       backgroundColor="primary"
       alignItems="center"

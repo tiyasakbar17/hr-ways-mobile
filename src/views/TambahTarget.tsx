@@ -273,7 +273,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> Nama </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="Nama"
@@ -286,7 +286,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> Tempat Lahir </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="Tempat Lahir"
@@ -367,7 +367,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> KTP </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="KTP"
@@ -384,7 +384,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> KK </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="KK"
@@ -401,7 +401,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> NPWP </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="NPWP"
@@ -416,7 +416,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> Bank </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="Bank"
@@ -431,7 +431,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> Bank Account </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="Bank Account"
@@ -448,7 +448,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> Salary </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="Salary"
@@ -562,7 +562,7 @@ const TambahTarget = ({navigation, route}: Props) => {
             <Text variant="smtitle"> Address Detail </Text>
             <Box alignItems="center">
               <FormTextInput
-                editable={oneData === null}
+                editable={state.type === 'edit' || state.type === 'add'}
                 styles={styles.formInputStyle}
                 style={{textTransform: 'none'}}
                 placeholder="Address Detail"
